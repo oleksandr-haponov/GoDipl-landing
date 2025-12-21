@@ -1,0 +1,45 @@
+@use '@/scss/_reset.scss' as *;
+@use '@/scss/_vars.scss' as *;
+@use '@/scss/_mixins.scss' as *;
+@use '@/scss/_container.scss' as *;
+@use '@/scss/_background.scss' as *;
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $ff-base;
+  font-size: 1rem;
+  background-color: $bg-c;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  position: relative;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.section {
+  margin-bottom: 8.75rem; // 140px
+
+  @include media(md) {
+    margin-bottom: 6rem; // 96px
+    &:last-of-type {
+      margin-bottom: 8.75rem; // 140px
+    }
+  }
+
+  @include media(sm) {
+    margin-bottom: 2.5rem; // 40px
+  }
+}

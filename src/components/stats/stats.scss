@@ -1,0 +1,64 @@
+@use '@/scss/_mixins.scss' as *;
+
+.marquee {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 7.5rem;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+
+  &-track {
+    display: flex;
+    width: fit-content;
+    animation: scroll-left 20s linear infinite;
+  }
+
+  &-list {
+    display: flex;
+    gap: 7.5rem;
+    margin-right: 7.5rem;
+
+    li {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #050c1573;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  }
+
+  @include media(md) {
+    margin-top: 6.25rem;
+
+    &-list {
+      gap: 6rem;
+      margin-right: 6rem;
+
+      li {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  @include media(sm) {
+    margin-top: 2.5rem;
+
+    &-list {
+      gap: 2.5rem;
+      margin-right: 2.5rem;
+
+      li {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

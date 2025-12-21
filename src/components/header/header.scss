@@ -1,0 +1,83 @@
+@use '@/scss/_vars.scss' as *;
+@use '@/scss/_mixins.scss' as *;
+
+.header {
+  background-color: $primary-c;
+
+  &-inner {
+    @include flex-between;
+    padding: 0.5rem 0;
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.header-btn {
+  max-height: 2.5rem; // 40px
+  padding: 0.75rem 1rem;
+  border-radius: $br-sm;
+  background-color: $white-c;
+  @include flex-between;
+  gap: 0.75rem; // 12px
+
+  font-size: 0.875rem; // 14px
+  font-weight: 500;
+  color: #0f2647;
+
+  @include media(sm) {
+    display: none;
+  }
+}
+
+.menu {
+  position: relative;
+
+  &-btn {
+    position: relative;
+    @include flex-center;
+    height: 2.5rem; // 40px
+    width: 2.5rem;
+    background-color: $white-c;
+    border-radius: $br-sm;
+    border: none;
+    cursor: pointer;
+  }
+
+  &-list {
+    position: absolute;
+    top: 3rem; // 48px
+    right: 0;
+    width: 15rem; // 240px
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; // 24px
+    background-color: $white-c;
+    border-bottom-left-radius: $br-sm;
+    border-bottom-right-radius: $br-sm;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+    z-index: 10;
+
+    opacity: 0;
+    transform: translateY(-1px);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+
+    &.is-open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+
+  &-link {
+    display: inline-block;
+    width: 100%;
+    padding: 0.25rem 0;
+    color: #0f2647;
+  }
+}

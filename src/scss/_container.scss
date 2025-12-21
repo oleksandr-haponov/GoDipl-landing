@@ -1,0 +1,28 @@
+@use './mixins' as *;
+
+.container {
+  $padding-xxl: 0 7.5rem; // 120px
+  $padding-xl: 0 2.5rem; // 40px
+  $padding-lg: 0 1.5rem; // 32px
+  $padding-sm: 0 1rem; // 16px
+
+  max-width: 90rem; // 1440px
+  margin: 0 auto;
+  padding: $padding-xxl;
+
+  @include media(xl) {
+    padding: $padding-xl;
+  }
+
+  @include media(lg) {
+    padding: $padding-xl;
+  }
+
+  @include media(md) {
+    padding: $padding-lg;
+  }
+
+  @include media(sm) {
+    padding: $padding-sm;
+  }
+}

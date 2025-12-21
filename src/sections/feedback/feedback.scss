@@ -1,0 +1,82 @@
+@use '@/scss/_vars.scss' as *;
+@use '@/scss/_mixins.scss' as *;
+
+.feedback {
+  &-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 3rem;
+  }
+
+  &-badge {
+    margin-bottom: 1.5rem;
+  }
+
+  &-title {
+    text-align: center;
+  }
+
+  &-slide {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem 1rem 1rem 0.5rem;
+    border-radius: $br-sm;
+    overflow: hidden;
+  }
+
+  &-button {
+    margin-top: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media(md) {
+    &-heading {
+      align-items: center;
+    }
+  }
+}
+
+.feedback {
+  &-slider {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    border-radius: $br-sm;
+    overflow: hidden;
+  }
+
+  & .swiper-wrapper {
+    border-radius: $br-sm;
+  }
+
+  & .swiper-slide {
+    background-color: $white-c;
+    border-radius: $br-sm;
+    overflow: hidden;
+  }
+
+  & .swiper-button-prev,
+  & .swiper-button-next {
+    @include flex-center;
+    min-width: 2.75rem; // 44px
+    min-height: 2.75rem;
+    position: static;
+    border-radius: $br-sm;
+    background-color: $white-c;
+    & svg {
+      display: block;
+      width: 5px;
+      height: 9px;
+      color: #0f2647;
+    }
+  }
+
+  @include media(md) {
+    &-slider {
+      gap: 1rem;
+    }
+  }
+}

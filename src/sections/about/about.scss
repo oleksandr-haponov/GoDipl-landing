@@ -1,0 +1,219 @@
+@use '@/scss/_vars.scss' as *;
+@use '@/scss/_mixins.scss' as *;
+
+.about {
+  &-inner {
+    display: grid;
+    column-gap: 2.5rem;
+
+    grid-template-areas:
+      'photos badge'
+      'photos title'
+      'photos desc'
+      'photos benefits'
+      'photos button';
+
+    @include media(md) {
+      grid-template-areas:
+        'badge'
+        'photos'
+        'title'
+        'desc'
+        'benefits'
+        'button';
+    }
+  }
+}
+
+.photos {
+  grid-area: photos;
+}
+.about-badge {
+  grid-area: badge;
+}
+.about-title {
+  grid-area: title;
+}
+.about-desc {
+  grid-area: desc;
+}
+.benefits {
+  grid-area: benefits;
+}
+.about-button {
+  grid-area: button;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: minmax(10rem, 13.5rem) minmax(10rem, 13.5rem); // 160px 216px
+  align-self: start;
+  justify-self: start;
+  gap: 0.5rem;
+
+  &-item {
+    position: relative;
+    width: 100%;
+    max-width: 13.5rem; // 216px
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+
+    & img {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:nth-child(1) {
+      border-top-left-radius: $br-md;
+      border-top-right-radius: $br-sm;
+      border-bottom-right-radius: $br-sm;
+      border-bottom-left-radius: $br-sm;
+      & img {
+        object-position: center 10%;
+      }
+    }
+
+    &:nth-child(2) {
+      border-top-left-radius: $br-sm;
+      border-top-right-radius: $br-md;
+      border-bottom-right-radius: $br-sm;
+      border-bottom-left-radius: $br-sm;
+      & img {
+        object-position: center 30%;
+      }
+    }
+
+    &:nth-child(3) {
+      border-top-left-radius: $br-sm;
+      border-top-right-radius: $br-sm;
+      border-bottom-right-radius: $br-sm;
+      border-bottom-left-radius: $br-md;
+      & img {
+        object-position: center 30%;
+      }
+    }
+
+    &:nth-child(4) {
+      border-top-left-radius: $br-sm;
+      border-top-right-radius: $br-sm;
+      border-bottom-right-radius: $br-md;
+      border-bottom-left-radius: $br-sm;
+      background: #dddee0;
+      @include flex-center;
+    }
+  }
+
+  &-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & span {
+      color: $text-c;
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+  }
+
+  @include media(md) {
+    grid-template-columns: repeat(2, 5.938rem); // 95px
+    justify-self: center;
+    margin-bottom: 2rem;
+    & span {
+      font-size: 1rem;
+    }
+  }
+}
+
+.about-desc {
+  font-size: 1.25rem; // 20px
+  line-height: 1.2;
+  color: $text-c;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1.5rem;
+  column-gap: 2rem;
+  margin-bottom: 2.5rem;
+
+  &-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    & img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  &-title {
+    margin-top: 0.2em;
+    font-size: 1.25rem; // 20px
+    font-weight: 500;
+    color: $title-c;
+  }
+
+  &-desc {
+    margin-top: 0.1rem;
+    font-size: 0.875rem;
+    color: $text-c;
+    line-height: 1.2;
+  }
+
+  @include media(sm) {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+
+    &-item {
+      max-width: 16rem; // 256px
+    }
+    &-title {
+      font-size: 1rem;
+    }
+  }
+}
+
+.about-badge {
+  margin-bottom: 1rem;
+  @include media(md) {
+    justify-self: center;
+  }
+}
+
+.about-title {
+  margin-bottom: 1.5rem;
+  @include media(md) {
+    justify-self: center;
+    margin-bottom: 1rem;
+  }
+  @include media(sm) {
+    justify-self: left;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.about-desc {
+  margin-bottom: 2rem;
+  @include media(md) {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  @include media(sm) {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+}
+
+.about-button {
+  justify-self: center;
+  width: fit-content;
+  height: fit-content;
+  @include media(sm) {
+    justify-self: left;
+  }
+}

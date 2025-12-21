@@ -1,0 +1,77 @@
+@use '@/scss/_mixins.scss' as *;
+
+main {
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bg01,
+.bg02,
+.bg03,
+.bg04 {
+  position: absolute;
+  z-index: -1;
+}
+
+.bg01 {
+  top: -15rem;
+  right: -5rem;
+
+  @include media(xl) {
+    top: -6rem;
+    max-width: 942px;
+  }
+
+  @include media(lg) {
+    top: 0rem;
+    max-width: 738px;
+  }
+
+  @include media(md) {
+    max-width: 608px;
+    top: -2rem;
+    right: 50%;
+    transform: translate(50%);
+  }
+
+  @include media(sm) {
+    display: none;
+  }
+}
+
+.bg02 {
+  top: 2rem;
+  left: -33rem;
+
+  @include media(xl) {
+    left: -37rem;
+  }
+
+  @include media(sm) {
+    left: -41rem;
+  }
+}
+
+.bg03 {
+  top: 52rem;
+  right: -30rem;
+
+  @include media(md) {
+    right: -39rem;
+  }
+}
+
+.bg04 {
+  bottom: -22rem;
+  left: -52rem;
+
+  @include media(md) {
+    bottom: -18rem;
+    left: -60rem;
+    // right: -39rem;
+  }
+
+  @include media(sm) {
+    left: -70rem;
+  }
+}

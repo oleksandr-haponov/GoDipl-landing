@@ -1,0 +1,21 @@
+.badge {
+  position: relative;
+  width: fit-content;
+  height: 0.875rem; // 22px
+  padding: 0.313rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    bottom: 0;
+    background-color: #2E75DF1A;
+    height: 16px;
+    width: 100%;
+  }
+  &-text {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #2255A2;
+  }
+}
