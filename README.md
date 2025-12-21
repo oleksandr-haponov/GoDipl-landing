@@ -5,6 +5,7 @@ Production repository
 
 * Node.js
 * Next.js
+* Vite (landing page)
 * JavaScript / TypeScript
 
 ## 📦 Installation

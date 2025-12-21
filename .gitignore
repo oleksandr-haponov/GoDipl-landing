@@ -48,5 +48,8 @@ Thumbs.db
 # Vercel
 .vercel
 
+# Vite
+apps/landing/dist/
+
 # Optional
 *.tsbuildinfo
