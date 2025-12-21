@@ -20,7 +20,7 @@ export default () => /*html*/ `
           <ul class='hero-list'>
             <li class='hero-list-item'>
               <img src="${clock}" alt='Термін' />
-              <span>Термін виконання  - від 2х годин</span>
+              <span>Термін виконання  - від 2-х годин</span>
             </li>
             <li class='hero-list-item'>
               <img src="${handCoin}" alt='Ціна' />
