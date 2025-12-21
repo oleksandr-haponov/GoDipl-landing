@@ -1,5 +1,5 @@
 # GoDipl
-Production repository
+Landing repository
 
 ## 🚀 Tech stack
 
