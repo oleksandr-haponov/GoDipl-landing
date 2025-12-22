@@ -6,7 +6,7 @@ import Feedback from '@/sections/feedback';
 import Request from '@/sections/request';
 import Footer from './components/footer';
 
-import { initHeaderMenu } from './components/header/initHeaderMenu';
+import { initHeaderMenu, initSmoothScroll } from './components/header/initHeaderMenu';
 import { initFeedbackSlider } from './sections/feedback/initFeedbackSwiper';
 import { initRequestForm } from './sections/request/initRequestForm';
 
@@ -25,7 +25,7 @@ const App = () => /*html*/ `
     <img class='bg03' src="${bg03}" alt='Фон - 03' />
     ${Feedback()}
     ${Request()}
-    <img class='bg04' src="${bg04}" alt='Фон - 04' />
+    <img class='bg04' src="${bg04}" alt='Фон - 04' /> 
   </main>
   ${Footer()}
 
@@ -33,5 +33,7 @@ const App = () => /*html*/ `
 
 document.querySelector('#app').innerHTML = App();
 initHeaderMenu();
+initSmoothScroll();
 initFeedbackSlider();
 initRequestForm();
+
