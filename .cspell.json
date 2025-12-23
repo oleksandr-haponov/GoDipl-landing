@@ -1,0 +1,61 @@
+{
+  "version": "0.2",
+  "language": "en,uk",
+  "useGitignore": true,
+
+  "dictionaries": ["html", "css", "typescript", "softwareTerms", "ukrainian"],
+
+  "words": [
+    "aria",
+    "labelledby",
+    "seo",
+    "footer",
+    "navbar",
+    "frontend",
+    "backend",
+    "dataset",
+    "middleware",
+    "webpack",
+    "vite",
+    "eslint",
+    "prettier",
+    "copilot",
+    "bitbucket",
+    "github",
+    "docker",
+    "yaml",
+    "godipl",
+    "Футерна"
+  ],
+
+  "ignorePaths": [
+    "node_modules",
+    "dist",
+    "build",
+    "coverage",
+    ".git",
+    ".vscode",
+    "*.lock",
+    "*.log"
+  ],
+
+  "ignoreRegExpList": [
+    "aria-[a-z-]+",
+    "data-[a-z-]+",
+    "[A-Za-z]+[0-9]+",
+    "[0-9]+[A-Za-z]+"
+  ],
+
+  "enableFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "css",
+    "json",
+    "yaml",
+    "md"
+  ]
+
+}
